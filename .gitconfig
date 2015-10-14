@@ -1,0 +1,14 @@
+[user]
+	name = yksz
+	email = user4git@gmail.com
+[color]
+	ui = auto
+[push]
+	default = simple
+[core]
+	autocrlf = input
+	editor = /usr/bin/vim
+[alias]
+	mg = merge --no-ff
+	sb = show-branch
+	lg = log --graph --all --oneline --decorate --tags --pretty='format:%C(yellow)%h %C(cyan)[%an] %C(reset)%s %C(blue)%ar%C(magenta)%d'
