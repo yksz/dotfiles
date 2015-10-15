@@ -42,9 +42,8 @@ if filereadable(expand('~/.vimrc.plugin'))
     source ~/.vimrc.plugin
 endif
 
-" Color scheme settings
+" Color settings
 set t_Co=256
-colorscheme molokai
 
 " Ctags settings
 set tags=.tags

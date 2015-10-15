@@ -1,11 +1,10 @@
 " NeoBundle - plugin manager
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
-    call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Vim plugins
-NeoBundle 'Shougo/neobundle.vim'
 " Common plugins
 NeoBundle 'tomasr/molokai'
 NeoBundle 'itchyny/lightline.vim'
@@ -39,6 +38,10 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 
+call neobundle#end()
+
+" molokai
+colorscheme molokai
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化する
 " syntastic
