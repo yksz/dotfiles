@@ -38,7 +38,9 @@ filetype off
 filetype plugin indent off
 
 " Plugin settings
-if filereadable(expand('~/.vimrc.plugin'))
+if filereadable(expand('~/.vimrc.plugin.light'))
+    source ~/.vimrc.plugin.light
+elseif filereadable(expand('~/.vimrc.plugin'))
     source ~/.vimrc.plugin
 endif
 
