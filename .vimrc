@@ -1,7 +1,7 @@
 " 基本設定
 set nocompatible " vi互換を解除する
 set encoding=utf-8
-set fileencodings=iso-2022-jp,sjis,euc-jp,utf-8
+set fileencodings=utf-8,sjis,euc-jp,iso-2022-jp
 set fileformat=unix
 set clipboard+=unnamed " クリップボードを使用する
 set backspace=indent,eol,start " Backspaceで削除を可能にする
@@ -20,14 +20,14 @@ highlight SpecialKey ctermfg=grey " 不可視文字の文字色を指定する
 " タブとインデントの設定
 set autoindent " 自動インデントを有効にする
 set cindent " C言語用の自動インデントを有効にする
-set expandtab " タブを空白に置き換える．":set noet" で元に戻る
+set expandtab " タブを空白に置き換える ':set noet'で元に戻る
 set tabstop=4 " タブ幅を設定する
 set shiftwidth=4 " インデント幅を設定する
 
 " 検索と置換の設定
 set hlsearch " 検索結果をハイライト表示する
 set incsearch " インクリメンタルサーチを行う
-set ignorecase " 大文字と小文字を区別しない
+set ignorecase " 大文字と小文字を区別しない ':set noic'で元に戻る
 set smartcase " 検索文字列に大文字が含まれていたら大文字と小文字を区別する
 
 " コマンドラインの設定
