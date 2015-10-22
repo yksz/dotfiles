@@ -20,6 +20,7 @@ colorscheme molokai
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化する
 " syntastic
+let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:loaded_syntastic_java_javac_checker = 1 " syntasticでjavaを無効化する
 let g:syntastic_go_checkers = ['go', 'golint']
 
