@@ -35,7 +35,6 @@ NeoBundle 'rust-lang/rust.vim'
 " Scala plugins
 NeoBundle 'derekwyatt/vim-scala'
 " Markdown
-NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 
 call neobundle#end()
