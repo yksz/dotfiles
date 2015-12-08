@@ -75,3 +75,10 @@ autocmd BufNewFile,BufRead *.{gradle*} set filetype=groovy
 
 " Indent setting
 autocmd BufNewFile,BufRead *.{html,css,js,scala*} setlocal tabstop=2 shiftwidth=2
+
+" Key mapping
+nnoremap sl <C-w>>
+nnoremap sh <C-w><
+nnoremap sk <C-w>+
+nnoremap sj <C-w>-
+cnoremap tn tabnew
