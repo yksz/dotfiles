@@ -18,6 +18,7 @@ HISTFILE=~/.zsh_history # 履歴をファイルに保存する
 HISTSIZE=10000 # メモリに保存される履歴の件数を設定する
 SAVEHIST=10000 # ファイルに保存される履歴の件数を設定する
 setopt hist_ignore_all_dups # 重複するコマンドがあれば古い履歴を削除する
+setopt hist_ignore_space # 行頭が空白のコマンドは記録しない
 setopt inc_append_history # 履歴をインクリメンタルサーチに追加する
 setopt share_history # 履歴を共有する
 setopt auto_pushd # ディレクトリの移動履歴をを記録する．"cd -[Tab]" で移動履歴を一覧表示する
