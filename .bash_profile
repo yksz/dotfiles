@@ -52,6 +52,7 @@ case $OSTYPE in
     darwin*)
         alias vim='/usr/local/bin/vim'
         alias ctags='/usr/local/bin/ctags'
+        alias ql='qlmanage -p "$@" >& /dev/null'
         alias jjs="$JAVA_HOME/jre/bin/jjs"
         ;;
     linux*)
