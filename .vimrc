@@ -44,6 +44,10 @@ elseif filereadable(expand('~/.vimrc.plugin'))
     source ~/.vimrc.plugin
 endif
 
+" AFTER - plugin settings
+filetype plugin indent on
+syntax on
+
 " Color settings
 set t_Co=256
 
@@ -60,14 +64,6 @@ autocmd FileType scheme set cindent&
 
 " Groovy settings
 autocmd FileType groovy set cindent&
-
-" Golang settings
-set runtimepath+=$GOROOT/misc/vim
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
-" AFTER - plugin settings
-filetype plugin indent on
-syntax on
 
 " FileType setting
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown

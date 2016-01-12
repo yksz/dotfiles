@@ -21,8 +21,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-scripts/c.vim'
 NeoBundle 'vim-scripts/a.vim'
 " Golang plugins
-"NeoBundle 'fatih/vim-go'
-NeoBundle 'golang/lint'
+NeoBundle 'fatih/vim-go'
 " Groovy plugins
 NeoBundle 'vim-scripts/groovy.vim'
 " JavaScript plugins

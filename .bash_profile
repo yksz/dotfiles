@@ -14,7 +14,6 @@ case $OSTYPE in
         # Scheme
         export SCHEME_LIBRARY_PATH=/usr/local/lib/slib/
         # Golang
-        export GOROOT=/cygdrive/c/Go
         export GOPATH=$HOME/go
         export PATH=$PATH:$GOPATH/bin
         ;;
@@ -24,7 +23,6 @@ case $OSTYPE in
         # Groovy
         export GROOVY_HOME=/usr/local/Cellar/groovy/2.4.3/libexec
         # Golang
-        export GOROOT=/usr/local/go
         export GOPATH=$HOME/go
         export PATH=$PATH:$GOPATH/bin
         # Node.js
