@@ -1,9 +1,9 @@
-##
-## 環境変数の設定
-##
+###
+### 環境変数の設定
+###
 export PATH=$PATH:~/bin
 
-# PostgreSQL
+## PostgreSQL
 export PGHOST=localhost
 export PGCLIENTENCODING=UTF-8
 export PGUSER=postgres
@@ -11,25 +11,25 @@ export PGUSER=postgres
 case $OSTYPE in
     cygwin)
         export PATH=$PATH:/usr/sbin
-        # Scheme
+        ## Scheme
         export SCHEME_LIBRARY_PATH=/usr/local/lib/slib/
-        # Golang
+        ## Golang
         export GOPATH=$HOME/go
         export PATH=$PATH:$GOPATH/bin
         ;;
     darwin*)
-        # Java
+        ## Java
         export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
-        # Groovy
+        ## Groovy
         export GROOVY_HOME=/usr/local/Cellar/groovy/2.4.3/libexec
-        # Golang
+        ## Golang
         export GOPATH=$HOME/go
         export PATH=$PATH:$GOPATH/bin
-        # Node.js
+        ## Node.js
         export NODE_PATH=/usr/local/lib/node_modules
-        # Felix
+        ## Felix
         export FELIX_HOME=~/tool/felix-framework-4.4.1
-        # Android
+        ## Android
         export ANDROID_SDK_ROOT=~/Library/Android/sdk
         export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
         ;;
@@ -38,9 +38,9 @@ case $OSTYPE in
 esac
 
 
-##
-## エイリアスの設定
-##
+###
+### エイリアスの設定
+###
 alias ls='ls -FG'
 alias java='java -Dfile.encoding=UTF-8'
 

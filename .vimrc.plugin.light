@@ -1,31 +1,32 @@
-" NeoBundle - plugin manager
+""" NeoBundle - the plugin manager
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Common plugins
+""" Plugins
+"" Common plugins
 NeoBundle 'tomasr/molokai'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/syntastic'
-" IDE plugins
+"" IDE plugins
 NeoBundle 'scrooloose/nerdtree'
 
 call neobundle#end()
 
-" molokai
+""" Plugins settings
+"" molokai
 colorscheme molokai
-" neocomplcache
+"" neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化する
-" syntastic
+"" syntastic
 let g:syntastic_c_compiler_options = '-std=c99 -I/usr/local/include -I./include'
 let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/include -I./include'
 let g:loaded_syntastic_java_javac_checker = 1 " syntasticでjavaを無効化する
 let g:syntastic_go_checkers = ['go']
-
-" NERDTree
+"" NERDTree
 let NERDTreeShowHidden = 1 " 隠しファイルを表示する
 autocmd vimenter * if !argc() | NERDTree | endif " 引数なしでVimを起動したらNERDTreeを開く
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " NERDTreeだけになったらVimを終了する
