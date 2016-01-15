@@ -1,7 +1,9 @@
-###
 ### 環境変数の設定
-###
 export PATH=$PATH:~/bin
+
+## Golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 ## PostgreSQL
 export PGHOST=localhost
@@ -13,18 +15,12 @@ case $OSTYPE in
         export PATH=$PATH:/usr/sbin
         ## Scheme
         export SCHEME_LIBRARY_PATH=/usr/local/lib/slib/
-        ## Golang
-        export GOPATH=$HOME/go
-        export PATH=$PATH:$GOPATH/bin
         ;;
     darwin*)
         ## Java
         export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
         ## Groovy
         export GROOVY_HOME=/usr/local/Cellar/groovy/2.4.3/libexec
-        ## Golang
-        export GOPATH=$HOME/go
-        export PATH=$PATH:$GOPATH/bin
         ## Node.js
         export NODE_PATH=/usr/local/lib/node_modules
         ## Felix
@@ -38,9 +34,7 @@ case $OSTYPE in
 esac
 
 
-###
 ### エイリアスの設定
-###
 alias ls='ls -FG'
 alias java='java -Dfile.encoding=UTF-8'
 
