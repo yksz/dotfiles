@@ -1,11 +1,11 @@
 #!/bin/sh
 
-BASE_DIR=$(cd $(dirname $0); pwd)
-ln -sf ${BASE_DIR}/.bash_profile       ~/.bash_profile
-ln -sf ${BASE_DIR}/.ctags              ~/.ctags
-ln -sf ${BASE_DIR}/.gitconfig          ~/.gitconfig
-ln -sf ${BASE_DIR}/.vimrc              ~/.vimrc
-ln -sf ${BASE_DIR}/.vimrc.plugin       ~/.vimrc.plugin
-#ln -sf ${BASE_DIR}/.vimrc.plugin.light ~/.vimrc.plugin.light
-ln -sf ${BASE_DIR}/.wgetrc             ~/.wgetrc
-ln -sf ${BASE_DIR}/.zshrc              ~/.zshrc
+script_dir=$(cd $(dirname $0); pwd)
+ln -sf ${script_dir}/.bash_profile       ~/.bash_profile
+ln -sf ${script_dir}/.ctags              ~/.ctags
+ln -sf ${script_dir}/.gitconfig          ~/.gitconfig
+ln -sf ${script_dir}/.vimrc              ~/.vimrc
+ln -sf ${script_dir}/.vimrc.plugin       ~/.vimrc.plugin
+#ln -sf ${script_dir}/.vimrc.plugin.light ~/.vimrc.plugin.light
+ln -sf ${script_dir}/.wgetrc             ~/.wgetrc
+ln -sf ${script_dir}/.zshrc              ~/.zshrc
