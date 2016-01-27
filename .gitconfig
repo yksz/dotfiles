@@ -5,6 +5,8 @@
 	ui = auto
 [push]
 	default = simple
+[fetch]
+	prune = true
 [core]
 	autocrlf = input
 	editor = /usr/bin/vim
