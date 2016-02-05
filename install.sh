@@ -1,10 +1,12 @@
 #!/bin/sh
 
+mkdir -p ~/.emacs.d
+
 script_dir=$(cd $(dirname $0); pwd)
 ln -sf ${script_dir}/.bash_aliases       ~/.bash_aliases
 ln -sf ${script_dir}/.bashrc             ~/.bashrc
 ln -sf ${script_dir}/.ctags              ~/.ctags
-ln -sf ${script_dir}/.emacs              ~/.emacs
+ln -sf ${script_dir}/.emacs.d/init.el    ~/.emacs.d/init.el
 ln -sf ${script_dir}/.gitconfig          ~/.gitconfig
 #ln -sf ${script_dir}/.proxy.sh           ~/.proxy.sh
 ln -sf ${script_dir}/.tmux.conf          ~/.tmux.conf

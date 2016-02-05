@@ -6,6 +6,7 @@ case $OSTYPE in
     darwin*)
         alias ls='ls -FG'
         alias vim='/usr/local/bin/vim'
+        alias emacs='/usr/local/bin/emacs'
         alias ctags='/usr/local/bin/ctags'
         alias ql='qlmanage -p "$@" >& /dev/null'
         alias jjs="$JAVA_HOME/jre/bin/jjs"
