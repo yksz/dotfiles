@@ -1,4 +1,3 @@
-### 環境変数の設定
 export PATH=$PATH:~/bin
 
 ## Proxy
@@ -31,24 +30,6 @@ case $OSTYPE in
         ## Android
         export ANDROID_SDK_ROOT=~/Library/Android/sdk
         export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-        ;;
-    linux*)
-        ;;
-esac
-
-
-### エイリアスの設定
-alias ls='ls -FG'
-alias java='java -Dfile.encoding=UTF-8'
-
-case $OSTYPE in
-    cygwin)
-        ;;
-    darwin*)
-        alias vim='/usr/local/bin/vim'
-        alias ctags='/usr/local/bin/ctags'
-        alias ql='qlmanage -p "$@" >& /dev/null'
-        alias jjs="$JAVA_HOME/jre/bin/jjs"
         ;;
     linux*)
         ;;
