@@ -22,3 +22,6 @@ setopt hist_ignore_space # 行頭が空白のコマンドは記録しない
 setopt inc_append_history # 履歴をインクリメンタルサーチに追加する
 setopt share_history # 履歴を共有する
 setopt auto_pushd # ディレクトリの移動履歴をを記録する．"cd -[Tab]" で移動履歴を一覧表示する
+
+### 外部ファイルの読み込み
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
