@@ -1,6 +1,16 @@
 ### 環境変数の設定
 export PATH=$PATH:~/bin
 
+## Proxy
+PROXY_HOST="proxy.example.com"
+PROXY_PORT="8080"
+PROXY_USER="user"
+PROXY_PASSWD="passwd"
+export http_proxy="http://${PROXY_USER}:${PROXY_PASSWD}@${PROXY_HOST}:${PROXY_PORT}/"
+export https_proxy="https://${PROXY_USER}:${PROXY_PASSWD}@${PROXY_HOST}:${PROXY_PORT}/"
+export ftp_proxy="ftp://${PROXY_USER}:${PROXY_PASSWD}@${PROXY_HOST}:${PROXY_PORT}/"
+export no_proxy="127.0.0.1,localhost"
+
 ## Golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
