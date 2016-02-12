@@ -14,3 +14,6 @@ export HTTP_PROXY=$http_proxy
 export HTTPS_PROXY=$https_proxy
 export FTP_PROXY=$ftp_proxy
 export NO_PROXY=$no_proxy
+
+# For Chicken Scheme
+export proxy_auth=$(echo -n ${PROXY_USER}:${PROXY_PASSWD} | base64)
