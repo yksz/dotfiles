@@ -1,4 +1,4 @@
-export PATH=$PATH:~/bin
+export PATH=$PATH:$HOME/bin
 
 ## Proxy
 [ -f ~/.proxy.sh ] && source ~/.proxy.sh

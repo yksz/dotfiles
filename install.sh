@@ -8,6 +8,7 @@ ln -sf ${script_dir}/.bashrc             ~/.bashrc
 ln -sf ${script_dir}/.ctags              ~/.ctags
 ln -sf ${script_dir}/.emacs.d/init.el    ~/.emacs.d/init.el
 ln -sf ${script_dir}/.gitconfig          ~/.gitconfig
+ln -sf ${script_dir}/.profile            ~/.profile
 #ln -sf ${script_dir}/.proxy.sh           ~/.proxy.sh
 ln -sf ${script_dir}/.tmux.conf          ~/.tmux.conf
 ln -sf ${script_dir}/.vimrc              ~/.vimrc
