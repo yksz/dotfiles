@@ -3,16 +3,15 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
 
 """ Plugins
 "" Common plugins
 NeoBundle 'tomasr/molokai'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic', '3.7.0'
 "" IDE plugins
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree', '5.0.0'
 
 call neobundle#end()
 
