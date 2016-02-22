@@ -13,12 +13,7 @@ NeoBundle 'scrooloose/syntastic', '3.7.0'
 NeoBundle 'tyru/open-browser.vim'
 "" IDE plugins
 NeoBundle 'scrooloose/nerdtree', '5.0.0'
-"NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'majutsushi/tagbar'
-"NeoBundle 'vim-scripts/SrcExpl'
-"" C/C++ plugins
-NeoBundle 'vim-scripts/c.vim'
-NeoBundle 'vim-scripts/a.vim'
 "" Golang plugins
 NeoBundle 'fatih/vim-go'
 "" Groovy plugins
@@ -53,10 +48,6 @@ let g:syntastic_go_checkers = ['go', 'golint']
 let NERDTreeShowHidden = 1 " 隠しファイルを表示する
 autocmd vimenter * if !argc() | NERDTree | endif " 引数なしでVimを起動したらNERDTreeを開く
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " NERDTreeだけになったらVimを終了する
-"" taglist
-let Tlist_Exit_OnlyWindow = 1 " taglistだけになったらVimを終了する
-let Tlist_Show_One_File = 1 " 現在表示中のファイルのタグのみ表示する
-let Tlist_Use_Right_Window = 1 " 右側にtaglistを表示する
 "" tagbar
 let g:tagbar_width = 25 " tagbarの幅を設定する
 let g:tagbar_type_go = {
@@ -69,8 +60,6 @@ let g:tagbar_type_go = {
         \'c:const'
     \]
 \}
-"" SrcExpl
-"let g:SrcExpl_isUpdateTags = 0 " SrcExplを開いたときにctagsを更新しない
 
 """ Plugins key mapping
 nmap <F5> :PrevimOpen<CR>
