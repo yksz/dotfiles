@@ -24,7 +24,8 @@ let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化する
 let g:syntastic_c_compiler_options = '-std=c99 -I/usr/local/include -I./include'
 let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/include -I./include'
 let g:loaded_syntastic_java_javac_checker = 1 " syntasticでjavaを無効化する
-let g:syntastic_go_checkers = ['go']
+let g:syntastic_python_checkers = ['pep8', 'pyflakes']
+let g:syntastic_go_checkers = ['go', 'golint']
 "" NERDTree
 let NERDTreeShowHidden = 1 " 隠しファイルを表示する
 autocmd vimenter * if !argc() | NERDTree | endif " 引数なしでVimを起動したらNERDTreeを開く
