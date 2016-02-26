@@ -1,3 +1,4 @@
+alias more='less'
 alias java='java -Dfile.encoding=UTF-8'
 
 case $OSTYPE in
