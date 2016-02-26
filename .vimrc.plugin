@@ -51,16 +51,6 @@ autocmd vimenter * if !argc() | NERDTree | endif " 引数なしでVimを起動�
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " NERDTreeだけになったらVimを終了する
 "" tagbar
 let g:tagbar_width = 25 " tagbarの幅を設定する
-let g:tagbar_type_go = {
-    \ 'ctagstype': 'Go',
-    \ 'kinds' : [
-        \'p:package',
-        \'f:function',
-        \'v:variables',
-        \'t:type',
-        \'c:const'
-    \]
-\}
 
 """ Plugins key mapping
 nmap <F5> :PrevimOpen<CR>
