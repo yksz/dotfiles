@@ -15,6 +15,10 @@ export PGUSER=postgres
 case $OSTYPE in
     cygwin)
         export PATH=$PATH:/usr/sbin
+        ## Golang
+        export GOPATH=$HOMEDRIVE$HOMEPATH\\go
+        export GOROOT=$HOMEDRIVE\\Go
+        export GOBIN=$GOROOT\\bin
         ## Scheme
         export SCHEME_LIBRARY_PATH=/usr/local/lib/slib/
         ;;
