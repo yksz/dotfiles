@@ -9,7 +9,7 @@
 	prune = true
 [core]
 	autocrlf = input
-	editor = vi
+	editor = vim
 [alias]
 	st = status
 	mg = merge --no-ff
