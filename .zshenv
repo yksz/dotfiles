@@ -16,7 +16,7 @@ case $OSTYPE in
     cygwin)
         export PATH=$PATH:/usr/sbin
         ## Golang
-        export GOPATH=$HOMEDRIVE$HOMEPATH\\go
+        export GOPATH=$HOMEDRIVE\\$HOMEPATH\\go
         export GOROOT=$HOMEDRIVE\\Go
         export GOBIN=$GOROOT\\bin
         ## Scheme
