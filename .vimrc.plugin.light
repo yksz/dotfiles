@@ -10,6 +10,7 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/syntastic', '3.7.0'
+NeoBundle 'kien/ctrlp.vim'
 "" IDE plugins
 NeoBundle 'scrooloose/nerdtree', '5.0.0'
 NeoBundle 'majutsushi/tagbar'
@@ -27,6 +28,10 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/include -I./incl
 let g:loaded_syntastic_java_javac_checker = 1
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
 let g:syntastic_go_checkers = ['go', 'golint']
+" ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_show_hidden = 1 " 隠しファイルを表示する
 "" NERDTree
 let NERDTreeShowHidden = 1
 autocmd vimenter * if !argc() | NERDTree | endif
