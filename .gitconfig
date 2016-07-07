@@ -11,10 +11,13 @@
 	autocrlf = input
 	editor = vim
 [alias]
-	st = status
+	d = diff
+	dr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+	dw = diff --word-diff
+	lg = log --graph --all --oneline --decorate --tags --pretty='format:%C(yellow)%h %C(cyan)[%an] %C(reset)%s %C(blue)%ar%C(magenta)%d'
 	mg = merge --no-ff
 	sb = show-branch
-	lg = log --graph --all --oneline --decorate --tags --pretty='format:%C(yellow)%h %C(cyan)[%an] %C(reset)%s %C(blue)%ar%C(magenta)%d'
+	st = status
 [http]
 #	proxy = http://user:passwd@proxy.example.com:8080
 [https]
