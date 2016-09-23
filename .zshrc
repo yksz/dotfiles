@@ -34,4 +34,3 @@ setopt auto_pushd # ディレクトリの移動履歴をを記録する．"cd -[
 
 ### 外部ファイルの読み込み
 [ -f ~/.profile ] && source ~/.profile
-[ -f ~/.bash_aliases ] && source ~/.bash_aliases

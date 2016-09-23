@@ -10,9 +10,12 @@
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
+    # include environment variables
+    [ -f ~/.zshenv ] && source ~/.zshenv
+
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+        . "$HOME/.bashrc"
     fi
 fi
 
@@ -20,3 +23,6 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# define aliases
+[ -f ~/.aliases ] && source ~/.aliases
