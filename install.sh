@@ -4,6 +4,7 @@ mkdir -p ~/.emacs.d
 
 dotfiles_dir=$(cd $(dirname $0); pwd)
 ln -sf ${dotfiles_dir}/.aliases            ~/.aliases
+#ln -sf ${dotfiles_dir}/.bashrc             ~/.bashrc
 ln -sf ${dotfiles_dir}/.ctags              ~/.ctags
 ln -sf ${dotfiles_dir}/.emacs.d/init.el    ~/.emacs.d/init.el
 ln -sf ${dotfiles_dir}/.gitconfig          ~/.gitconfig
