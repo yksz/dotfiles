@@ -40,13 +40,15 @@ call neobundle#end()
 colorscheme molokai
 "" neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化する
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length = 5
 "" syntastic
 let g:syntastic_c_compiler_options = '-std=c99 -I/usr/local/include -I./include -I./src'
 let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/include -I./include -I./src'
 let g:loaded_syntastic_java_javac_checker = 1 " syntasticでjavaを無効化する
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
 let g:syntastic_go_checkers = ['go', 'golint']
-" ctrlp
+"" ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1 " 隠しファイルを表示する
