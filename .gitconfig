@@ -3,17 +3,17 @@
 	email = yksz.dev@gmail.com
 [color]
 	ui = auto
-[push]
-	default = simple
-[fetch]
-	prune = true
 [core]
 	autocrlf = input
 	editor = vim
+[fetch]
+	prune = true
+[push]
+	default = simple
 [alias]
-	d = diff
-	dr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
-	dw = diff --word-diff
+	d  = diff -M
+	dr = diff -M --color-words --word-diff-regex='\\w+|[^[:space:]]'
+	dw = diff -M --word-diff
 	lg = log --graph --all --oneline --decorate --tags --pretty='format:%C(yellow)%h %C(cyan)[%an] %C(reset)%s %C(blue)%ar%C(magenta)%d'
 	mg = merge --no-ff
 	sb = show-branch
