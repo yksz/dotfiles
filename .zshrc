@@ -10,7 +10,7 @@ zstyle ':vcs_info:*' formats '(%b)'
 zstyle ':vcs_info:*' actionformats '(%b|%a)'
 precmd () {
     psvar=()
-    LANG=en_US.UTF-8 vcs_info
+    vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 PROMPT='%F{green}%n@%m%f %F{yellow}%(5~,%-2~/.../%2~,%~)%f'$' %1(v|%F{cyan}%1v%f|)\n''%# '
