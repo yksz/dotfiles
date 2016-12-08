@@ -24,6 +24,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'jshint/jshint'
 "" Lisp plugins
 NeoBundle 'vim-scripts/vim-niji'
+NeoBundle 'kovisoft/slimv'
 "" OCaml plugins
 NeoBundle 'the-lambda-church/merlin'
 "" Rust plugins
