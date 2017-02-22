@@ -1,5 +1,9 @@
 #!/bin/sh
 
-DOWNLOAD_DIR="$HOME/bin"
+INSTALL_DIR="$HOME/bin"
 
-wget -P $DOWNLOAD_DIR https://raw.githubusercontent.com/kou1okada/apt-cyg/master/apt-cyg
+cd $INSTALL_DIR
+wget https://raw.githubusercontent.com/transcode-open/apt-cyg/master/apt-cyg
+chmod 755 apt-cyg
+
+apt-cyg -m ftp://ftp.iij.ad.jp/pub/cygwin/ update
