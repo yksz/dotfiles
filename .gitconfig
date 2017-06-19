@@ -20,6 +20,8 @@
 	mg = merge --no-ff
 	sb = show-branch
 	st = status
+
+	pushf = push --force-with-lease
 [http]
 #	proxy = http://user:passwd@proxy.example.com:8080
 [https]
