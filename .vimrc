@@ -64,12 +64,13 @@ set lispwords+=call-with-output-file
 autocmd FileType scheme set nocindent
 
 """ FileType setting
+autocmd BufNewFile,BufRead *.{tag} set filetype=html
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-autocmd BufNewFile,BufRead *.{gradle*} set filetype=groovy
-autocmd BufNewFile,BufRead *.{lfe*} set filetype=lisp
+autocmd BufNewFile,BufRead *.{gradle} set filetype=groovy
+autocmd BufNewFile,BufRead *.{lfe} set filetype=lisp
 
 """ Indent setting
-autocmd BufNewFile,BufRead *.{html,css,js,scala*} setlocal tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.{html,css,js,scala} setlocal tabstop=2 shiftwidth=2
 
 """ Key mapping
 nnoremap sl <C-w>>
