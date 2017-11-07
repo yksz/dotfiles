@@ -12,10 +12,12 @@
 	default = simple
 [alias]
 	d  = diff -M
+	dn = diff -M --name-status
 	dr = diff -M --color-words --word-diff-regex='\\w+|[^[:space:]]'
 	dw = diff -M --word-diff
 	l  = log --graph --oneline --decorate --tags --pretty='format:%C(yellow)%h %C(cyan)[%an] %C(reset)%s %C(blue)%ar%C(magenta)%d'
 	la = log --graph --oneline --decorate --tags --pretty='format:%C(yellow)%h %C(cyan)[%an] %C(reset)%s %C(blue)%ar%C(magenta)%d' --all
+	ln = log --date=iso --oneline --pretty='format:%C(yellow)%h %C(green)%ad %C(cyan)[%an] %C(reset)%s %C(magenta)%d' --name-status
 	lt = log --date=iso --oneline --pretty='format:%C(yellow)%h %C(green)%ad %C(cyan)[%an] %C(reset)%s %C(magenta)%d'
 	mg = merge --no-ff
 	sb = show-branch
