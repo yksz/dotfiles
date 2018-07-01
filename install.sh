@@ -1,13 +1,9 @@
 #!/bin/sh
 
-mkdir -p ~/.emacs.d/lisp
-
 dotfiles_dir=$(cd $(dirname $0); pwd)
 ln -sf ${dotfiles_dir}/.aliases                  ~/.aliases
 #ln -sf ${dotfiles_dir}/.bashrc                   ~/.bashrc
 ln -sf ${dotfiles_dir}/.ctags                    ~/.ctags
-ln -sf ${dotfiles_dir}/.emacs.d/init.el          ~/.emacs.d/init.el
-ln -sf ${dotfiles_dir}/.emacs.d/lisp/packages.el ~/.emacs.d/lisp/packages.el
 ln -sf ${dotfiles_dir}/.gitconfig                ~/.gitconfig
 ln -sf ${dotfiles_dir}/.profile                  ~/.profile
 #ln -sf ${dotfiles_dir}/.proxy.sh                 ~/.proxy.sh
