@@ -1,67 +1,49 @@
-""" NeoBundle - The plugin manager
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-""" Plugins
-"" Common plugins
+""" プラグイン
 NeoBundle 'tomasr/molokai'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'scrooloose/syntastic', '3.7.0'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'tyru/open-browser.vim'
-"" IDE plugins
 NeoBundle 'scrooloose/nerdtree', '5.0.0'
 NeoBundle 'majutsushi/tagbar'
-"" Golang plugins
-NeoBundle 'fatih/vim-go'
-"" Groovy plugins
-NeoBundle 'vim-scripts/groovy.vim'
-"" JavaScript plugins
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'jshint/jshint'
-"" Lisp plugins
-NeoBundle 'vim-scripts/vim-niji'
-NeoBundle 'kovisoft/slimv'
-"" OCaml plugins
-NeoBundle 'the-lambda-church/merlin'
-"" Rust plugins
-NeoBundle 'rust-lang/rust.vim'
-"" Scala plugins
-NeoBundle 'derekwyatt/vim-scala'
-"" Markdown
-NeoBundle 'kannokanno/previm'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'kien/ctrlp.vim'
+
+""" ファイル形式依存のプラグイン
+if filereadable(expand('~/.vimrc.plugin.filetype'))
+    source ~/.vimrc.plugin.filetype
+endif
 
 call neobundle#end()
 
-""" Plugins settings
-"" molokai
+""" プラグインの設定
+" molokai
 colorscheme molokai
-"" neocomplcache
-let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化する
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_min_syntax_length = 5
-"" syntastic
+" nerdtree
+let NERDTreeShowHidden = 1 " 隠しファイルを表示する
+autocmd vimenter * if !argc() | NERDTree | endif " 引数なしでVimを起動したらNERDTreeを開く
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " NERDTreeだけになったらVimを終了する
+" tagbar
+let g:tagbar_width = 25 " tagbarの幅を設定する
+" syntastic
 let g:syntastic_c_compiler_options = '-std=c99 -I/usr/local/include -I./include -I./src'
 let g:syntastic_cpp_compiler_options = '-std=c++11 -I/usr/local/include -I./include -I./src'
 let g:syntastic_javascript_checkers = ['gjslint']
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
 let g:syntastic_go_checkers = ['go', 'golint']
 let g:loaded_syntastic_java_javac_checker = 1 " syntasticでjavaを無効化する
-"" ctrlp
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化する
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length = 5
+" ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1 " 隠しファイルを表示する
-"" NERDTree
-let NERDTreeShowHidden = 1 " 隠しファイルを表示する
-autocmd vimenter * if !argc() | NERDTree | endif " 引数なしでVimを起動したらNERDTreeを開く
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " NERDTreeだけになったらVimを終了する
-"" tagbar
-let g:tagbar_width = 25 " tagbarの幅を設定する
 
-""" Plugins key mapping
-nmap <F5> :PrevimOpen<CR>
+""" プラグインのキーマッピング
 nmap <F8> :NERDTreeToggle<CR>
 nmap <F9> :TagbarToggle<CR>

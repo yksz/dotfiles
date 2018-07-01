@@ -1,0 +1,21 @@
+""" 拡張子の設定
+autocmd BufNewFile,BufRead *.{proxy}  set filetype=sh
+autocmd BufNewFile,BufRead *.{gradle} set filetype=groovy
+autocmd BufNewFile,BufRead *.{lfe}    set filetype=lisp
+autocmd BufNewFile,BufRead *.{md}     set filetype=markdown
+autocmd BufNewFile,BufRead *.{tag}    set filetype=html
+
+""" インデントの設定
+autocmd FileType c          setlocal cindent
+autocmd FileType cpp        setlocal cindent
+autocmd FileType css        setlocal tabstop=2 shiftwidth=2
+autocmd FileType html       setlocal tabstop=2 shiftwidth=2
+autocmd FileType java       setlocal cindent
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
+autocmd FileType lisp       setlocal lisp
+autocmd FileType scala      setlocal tabstop=2 shiftwidth=2
+
+""" 各ファイル形式の設定
+autocmd FileType gitrebase  setlocal nomodeline
+autocmd FileType lisp       setlocal lispwords-=if lispwords+=defmodule
+autocmd FileType scheme     setlocal lispwords+=call-with-input-file lispwords+=call-with-output-file

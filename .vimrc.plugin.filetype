@@ -1,0 +1,21 @@
+" Golang
+NeoBundle 'fatih/vim-go'
+" Groovy
+NeoBundle 'vim-scripts/groovy.vim'
+" JavaScript
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'jshint/jshint'
+" Lisp
+NeoBundle 'vim-scripts/vim-niji'
+NeoBundle 'kovisoft/slimv'
+" Markdown
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+" OCaml
+NeoBundle 'the-lambda-church/merlin'
+" Rust
+NeoBundle 'rust-lang/rust.vim'
+" Scala
+NeoBundle 'derekwyatt/vim-scala'
+
+nmap <F5> :PrevimOpen<CR>

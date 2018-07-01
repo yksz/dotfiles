@@ -5,6 +5,7 @@ help() {
     echo ""
     echo "option:"
     echo "    -h    print this message"
+    echo "    -f    use vimrc.filetype"
     echo "    -p    use proxy"
     echo "    -z    use zsh"
     echo ""
@@ -22,6 +23,13 @@ deploy() {
     ln -sf ${dotfiles_dir}/.tmux.conf    ~/.tmux.conf
     ln -sf ${dotfiles_dir}/.vimrc        ~/.vimrc
     ln -sf ${dotfiles_dir}/.vimrc.plugin ~/.vimrc.plugin
+    if [ -n "$use_filetype" ]; then
+        ln -sf ${dotfiles_dir}/.vimrc.filetype        ~/.vimrc.filetype
+        ln -sf ${dotfiles_dir}/.vimrc.plugin.filetype ~/.vimrc.plugin.filetype
+    else
+        rm -f ~/.vimrc.filetype
+        rm -f ~/.vimrc.plugin.filetype
+    fi
     if [ -n "$use_proxy" ]; then
         ln -sf ${dotfiles_dir}/.env.proxy ~/.env.proxy
     else
@@ -36,12 +44,13 @@ deploy() {
     fi
 }
 
-while getopts hpz opt
+while getopts hfpz opt
 do
     case $opt in
         h) help; exit 0 ;;
-        p) use_proxy=1  ;;
-        z) use_zsh=1    ;;
+        f) use_filetype=1 ;;
+        p) use_proxy=1    ;;
+        z) use_zsh=1      ;;
     esac
 done
 deploy
