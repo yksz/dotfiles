@@ -20,7 +20,11 @@
 	ln = log --date=iso --oneline --pretty='format:%C(yellow)%h %C(green)%ad %C(cyan)[%an] %C(reset)%s %C(magenta)%d' --name-status
 	lt = log --date=iso --oneline --pretty='format:%C(yellow)%h %C(green)%ad %C(cyan)[%an] %C(reset)%s %C(magenta)%d'
 	mg = merge --no-ff
+	s  = stash
 	sb = show-branch
+	sl = stash list
+	sp = stash pop
+	ss = stash show
 	st = status
 
 	pushf = push --force-with-lease
