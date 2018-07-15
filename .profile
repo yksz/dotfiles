@@ -6,7 +6,7 @@
 [ -f ~/.env ] && source ~/.env
 
 # include aliases
-[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.alias ] && source ~/.alias
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

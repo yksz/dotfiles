@@ -1,0 +1,27 @@
+alias df='df -h'
+alias du='du -h'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias java='java -Dfile.encoding=UTF-8'
+alias l='ls -CF'
+alias la='ls -AF'
+alias less='less -rR'
+alias ll='ls -ahlF'
+alias ls='ls -hF'
+alias more='less'
+alias tmux='tmux -2'
+alias whence='type -a'
+
+case $OSTYPE in
+    linux*)
+        alias ls='ls -hF --color=auto'
+        ;;
+    darwin*)
+        alias ls='ls -hFG'
+        alias ql='qlmanage -p "$@" >& /dev/null'
+        ;;
+    cygwin)
+        alias ls='ls -hF --color=auto'
+        ;;
+esac

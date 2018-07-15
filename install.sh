@@ -13,7 +13,7 @@ help() {
 deploy() {
     dotfiles_dir=$(cd $(dirname $0); pwd)
     set -x
-    ln -sf ${dotfiles_dir}/.aliases      ~/.aliases
+    ln -sf ${dotfiles_dir}/.alias        ~/.alias
     ln -sf ${dotfiles_dir}/.bashrc       ~/.bashrc
     ln -sf ${dotfiles_dir}/.ctags        ~/.ctags
     ln -sf ${dotfiles_dir}/.env          ~/.env
