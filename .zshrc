@@ -1,5 +1,4 @@
 ### 基本設定
-export LANG=ja_JP.UTF-8 # 文字コードを設定する
 setopt no_beep # ビープ音を無効にする
 exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & ) # 標準エラー出力の色を変更する
 #bindkey -v # vi のキーバインドを使用する
@@ -30,6 +29,3 @@ setopt hist_ignore_space # 行頭が空白のコマンドは記録しない
 setopt inc_append_history # 履歴をインクリメンタルサーチに追加する
 setopt share_history # 履歴を共有する
 setopt auto_pushd # ディレクトリの移動履歴をを記録する．"cd -[Tab]" で移動履歴を一覧表示する
-
-### 外部ファイルの読み込み
-[ -f ~/.profile ] && source ~/.profile
