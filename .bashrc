@@ -3,6 +3,9 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
+# include aliases
+[ -f ~/.alias ] && source ~/.alias
+
 ### Shell Options
 shopt -s cdspell
 shopt -s globstar

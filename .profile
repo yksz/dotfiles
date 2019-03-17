@@ -5,9 +5,6 @@
 # include environment variables
 [ -f ~/.env ] && source ~/.env
 
-# include aliases
-[ -f ~/.alias ] && source ~/.alias
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
