@@ -1,3 +1,6 @@
+### 外部ファイルの読み込み
+[ -f ~/.alias ] && source ~/.alias
+
 ### 基本設定
 setopt no_beep # ビープ音を無効にする
 zstyle ':completion:*' use-cache true
