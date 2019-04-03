@@ -1,23 +1,20 @@
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/.vim/bundle/'))
+call plug#begin('~/.vim/plugged')
 
 """ プラグイン
-NeoBundle 'tomasr/molokai'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'scrooloose/nerdtree', '5.0.0'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'kien/ctrlp.vim'
+Plug 'tomasr/molokai'
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree', { 'tag': '5.0.0' }
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+"Plug 'Shougo/neocomplcache'
+Plug 'kien/ctrlp.vim'
 
 """ ファイル形式依存のプラグイン
 if filereadable(expand('~/.vimrc.plugin.filetype'))
     source ~/.vimrc.plugin.filetype
 endif
 
-call neobundle#end()
+call plug#end()
 
 """ プラグインの設定
 " molokai
